@@ -12,7 +12,7 @@ If you find the code and dataset useful in your research, please consider citing
 
     @inproceedings{Huang-CVPR-2016,
       author  = {Dong, Li and Huang, Jia-Bin and Li, Yali and Wang, Shengjin and Yang, Ming-Hsuan},
-      title   = {Detecting Migrating Birds at Night},
+      title   = {Weakly Supervised Object Localization with Progressive Domain Adaptation},
       booktitle = {Proceedings of the IEEE  Conference on Computer Vision and Pattern Recognition)},
       year    = {2015},
       volume  = {},
