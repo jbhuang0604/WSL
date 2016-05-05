@@ -49,11 +49,7 @@ If you find the code and pre-trained models useful in your research, please cons
     $VOCdevkit/VOCcode/                   # VOC utility code
     $VOCdevkit/VOC2007                    # image sets, annotations, etc.
     # ... and several other directories ...
-    ```
-
-Then create symlinks for the dataset:
-
-    ```
+    # Then create symlinks for the dataset:
     cd $WSL_ROOT/data
     ln -s $VOCdevkit VOCdevkit2007
     ```
