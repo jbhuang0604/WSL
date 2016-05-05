@@ -31,7 +31,7 @@ If you find the code and pre-trained models useful in your research, please cons
 
 2. Install caffe. We call the root directory of the project code `WSL_ROOT`.
 
-```
+```Shell
 cd $WSL_ROOT/caffe-wsl
 # Now follow the Caffe installation instructions here:
 # http://caffe.berkeleyvision.org/installation.html
