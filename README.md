@@ -31,7 +31,7 @@ If you find the code and pre-trained models useful in your research, please cons
 
 2. Install caffe. We call the root directory of the project code `WSL_ROOT`.
 
-```Shell
+```
 cd $WSL_ROOT/caffe-wsl
 # Now follow the Caffe installation instructions here:
 # http://caffe.berkeleyvision.org/installation.html
@@ -44,15 +44,16 @@ make matcaffe
 
 3. Download the PASCAL VOC 2007 dataset. Extract all the tars into one directory named `VOCdevkit`. It should have this basic structure: 
 
-```Shell
+```
 $VOCdevkit/                           # development kit
 $VOCdevkit/VOCcode/                   # VOC utility code
 $VOCdevkit/VOC2007                    # image sets, annotations, etc.
 # ... and several other directories ...
 ```
 
-```Shell
-Then create symlinks for the PASCAL VOC dataset:
+Then create symlinks for the dataset:
+
+```
 cd $WSL_ROOT/data
 ln -s $VOCdevkit VOCdevkit2007
 ```
@@ -63,7 +64,7 @@ ln -s $VOCdevkit VOCdevkit2007
 
 6. Install the project.
 
-```Shell
+```
 cd $WSL_ROOT
 # Start MATLAB
 matlab
