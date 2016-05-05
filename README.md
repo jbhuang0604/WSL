@@ -29,10 +29,9 @@ If you find the code and pre-trained models useful in your research, please cons
 
 1. Download and unzip the project code.
 
-2. Install caffe.
+2. Install caffe. We call the root directory of the project code `WSL_ROOT`.
 
 ```Shell
-# We call the root directory of the project code `WSL_ROOT`.
 cd $WSL_ROOT/caffe-wsl
 # Now follow the Caffe installation instructions here:
 # http://caffe.berkeleyvision.org/installation.html
@@ -43,15 +42,17 @@ make pycaffe
 make matcaffe
 ```
 
-3. Download and create symlinks for the PASCAL VOC 2007 dataset.
+3. Download the PASCAL VOC 2007 dataset. Extract all the tars into one directory named `VOCdevkit`. It should have this basic structure: 
 
 ```Shell
-# Download the training, validation, test data and VOCdevkit. Extract all of these tars into one directory named `VOCdevkit`. It should have this basic structure: 
 $VOCdevkit/                           # development kit
 $VOCdevkit/VOCcode/                   # VOC utility code
 $VOCdevkit/VOC2007                    # image sets, annotations, etc.
 # ... and several other directories ...
-# Then create symlinks for the PASCAL VOC dataset:
+```
+
+```Shell
+Then create symlinks for the PASCAL VOC dataset:
 cd $WSL_ROOT/data
 ln -s $VOCdevkit VOCdevkit2007
 ```
@@ -71,7 +72,7 @@ matlab
 
 ### Usage
 
-# You will need about 150GB of disk space free for the feature cache (which is stored in `$WSL_ROOT/cache` by default. The final adapted model will be stored in `$WSL_ROOT/output/default/voc_2007_trainval`.
+You will need about 150GB of disk space free for the feature cache (which is stored in `$WSL_ROOT/cache` by default. The final adapted model will be stored in `$WSL_ROOT/output/default/voc_2007_trainval`.
 
 1. Classification adaptation.
 
