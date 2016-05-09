@@ -1,3 +1,14 @@
+% AUTORIGHTS
+% ---------------------------------------------------------
+% Copyright (c) 2011-2012, Ross Girshick
+% Copyright (c) 2016, Dong Li
+% 
+% This file is part of the WSL code and is available 
+% under the terms of the MIT License provided in 
+% LICENSE. Please retain this notice and LICENSE if you use 
+% this file (or any portion of it) in your project.
+% ---------------------------------------------------------
+
 function conf = voc_config(varargin)
 % Set up configuration variables.
 %   conf = voc_config(varargin)
@@ -13,18 +24,6 @@ function conf = voc_config(varargin)
 %      to a function that returns a conf structure with specific
 %      overrides set. This method is persistent until VOC_CONFIG_OVERRIDE
 %      is cleared. See sample_voc_config_override.m for an example.
-
-% AUTORIGHTS
-% -------------------------------------------------------
-% Copyright (C) 2011-2012 Ross Girshick
-% 
-% This file is part of the voc-releaseX code
-% (http://people.cs.uchicago.edu/~rbg/latent/)
-% and is available under the terms of an MIT-like license
-% provided in COPYING. Please retain this notice and
-% COPYING if you use this file (or a portion of it) in
-% your project.
-% -------------------------------------------------------
 
 
 % ~~~~~~~~~~~~~~~~~~~~~~ BASIC SETUP ~~~~~~~~~~~~~~~~~~~~~~
