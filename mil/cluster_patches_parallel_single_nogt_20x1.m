@@ -1,16 +1,17 @@
-function cluster_patches_parallel_single_nogt_20x1(seed_pos_image_id, ...
-                             classid, trainset, year, Q, varargin)
-              
 % AUTORIGHTS
 % ---------------------------------------------------------
 % Copyright (c) 2014, Hyun Oh Song
+% Copyright (c) 2016, Dong Li
 % 
-% This file is part of the Song-ICML2014 code and is available 
-% under the terms of the Simplified BSD License provided in 
+% This file is part of the WSL code and is available 
+% under the terms of the MIT License provided in 
 % LICENSE. Please retain this notice and LICENSE if you use 
 % this file (or any portion of it) in your project.
 % ---------------------------------------------------------
 
+function cluster_patches_parallel_single_nogt_20x1(seed_pos_image_id, ...
+                             classid, trainset, year, Q, varargin)
+              
 if ischar(seed_pos_image_id)
   seed_pos_image_id = str2double(seed_pos_image_id); 
 end         
