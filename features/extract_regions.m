@@ -1,5 +1,6 @@
 % AUTORIGHTS
 % ---------------------------------------------------------
+% Copyright (c) 2014, Ross Girshick
 % Copyright (c) 2016, Dong Li
 % 
 % This file is part of the WSL code and is available 
