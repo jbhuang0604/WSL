@@ -58,6 +58,9 @@ If you find the code and pre-trained models useful in your research, please cons
 
 5. Download the pre-computed EdgeBox proposals and put them into `$WSL_ROOT/data/edgebox_data`.
 
+- [voc_2007_trainval](https://drive.google.com/open?id=0BynEQyOSGRoSR0pYaVFNYkpkUVU)
+- [voc_2007_test](https://drive.google.com/open?id=0BynEQyOSGRoSbzhGbjM0RE5yNXM)
+
 6. Install the project.
 
     ```
