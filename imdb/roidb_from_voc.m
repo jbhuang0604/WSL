@@ -8,9 +8,10 @@ function roidb = roidb_from_voc(imdb)
 % AUTORIGHTS
 % ---------------------------------------------------------
 % Copyright (c) 2014, Ross Girshick
+% Copyright (c) 2016, Dong Li
 % 
-% This file is part of the R-CNN code and is available 
-% under the terms of the Simplified BSD License provided in 
+% This file is part of the WSL code and is available 
+% under the terms of the MIT License provided in 
 % LICENSE. Please retain this notice and LICENSE if you use 
 % this file (or any portion of it) in your project.
 % ---------------------------------------------------------
@@ -52,7 +53,7 @@ end
 function rec = attach_proposals(voc_rec, boxes, class_to_id)
 % ------------------------------------------------------------------------
 
-% change selective search order from [y1 x1 y2 x2] to [x1 y1 x2 y2]
+% change the format of pre-computed object proposals from [y1 x1 y2 x2] to [x1 y1 x2 y2]
 boxes = boxes(:, [2 1 4 3]);
 
 %           gt: [2108x1 double]
