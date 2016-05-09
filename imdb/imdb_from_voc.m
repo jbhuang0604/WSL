@@ -15,18 +15,6 @@ function imdb = imdb_from_voc(root_dir, image_set, year)
 % this file (or any portion of it) in your project.
 % ---------------------------------------------------------
 
-%imdb.name = 'voc_train_2007'
-%imdb.image_dir = '/work4/rbg/VOC2007/VOCdevkit/VOC2007/JPEGImages/'
-%imdb.extension = '.jpg'
-%imdb.image_ids = {'000001', ... }
-%imdb.sizes = [numimages x 2]
-%imdb.classes = {'aeroplane', ... }
-%imdb.num_classes
-%imdb.class_to_id
-%imdb.class_ids
-%imdb.eval_func = pointer to the function that evaluates detections
-%imdb.roidb_func = pointer to the function that returns regions of interest
-
 cache_file = ['./imdb/cache/imdb_voc_' year '_' image_set];
 try
   load(cache_file);
