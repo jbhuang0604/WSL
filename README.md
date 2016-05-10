@@ -29,12 +29,11 @@ If you find the code and pre-trained models useful in your research, please cons
 
 1. Download and unzip the project code.
 
-2. Install caffe. Please follow the [Caffe installation instructions](http://caffe.berkeleyvision.org/installation.html) for details.
+2. Install Caffe. Please follow the [Caffe installation instructions](http://caffe.berkeleyvision.org/installation.html) to install dependencies and then compile Caffe:
 
     ```
     # We call the root directory of the project code `WSL_ROOT`.
     cd $WSL_ROOT/caffe-wsl
-    # Compilation:
     make all -j8
     make pycaffe
     make matcaffe
