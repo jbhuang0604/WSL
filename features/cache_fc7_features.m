@@ -47,9 +47,9 @@ fprintf('~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n');
 % load the region of interest database
 roidb = imdb.roidb_func(imdb);
 
-if caffe('is_initialized') == 0
-    caffe('init', opts.net_def_file, opts.net_file, 'test');
-end
+
+caffe('init', opts.net_def_file, opts.net_file, 'test');
+
 % caffe('set_mode_cpu');
 caffe('set_mode_gpu');
 % caffe('set_device',3);
