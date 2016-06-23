@@ -11,10 +11,10 @@
 
 function models = train_classes_20x1_smooth_greedycover(classid, varargin)
                             
-% HOS: Sort clusters by discriminativeness score, greedily take
-%     non-overlapping (image ids, or boxes) in K1 until the score goes bad          
+% Sort clusters by discriminativeness score, greedily take
+% non-overlapping (image ids, or boxes) in K1 until the score goes bad          
 
-% HOS: initialize and fix the random seed
+% initialize and fix the random seed
 randn('state', 1);
 rand('state',  1);
 
@@ -261,7 +261,7 @@ function [X_neg, keys] = sample_negative_features(first_time, models, ...
                                                   caches, dataset, ind, ...
                                                   opts)
 % ------------------------------------------------------------------------
-d = load_cached_features_hos(dataset.trainset, dataset.year, dataset.neg_image_ids{ind});
+d = load_cached_features_hos(1, dataset.trainset, dataset.year, dataset.neg_image_ids{ind});
 
 if length(d.overlap) ~= size(d.feat, 1)
   fprintf('WARNING: %s has data mismatch\n', dataset.neg_image_ids{ind});
@@ -445,7 +445,7 @@ for boxid = 1:length(trainset_matrix)
   this_image_idx = trainset_matrix(1, boxid);
   this_box_idx   = trainset_matrix(2, boxid);
   
-  img_struct = load_cached_features_hos(dataset.trainset, dataset.year, sample_pos_image_ids{this_image_idx});
+  img_struct = load_cached_features_hos(1, dataset.trainset, dataset.year, sample_pos_image_ids{this_image_idx});
   
   img_struct.boxes = img_struct.boxes(img_struct.gt~=1,:);
   img_struct.feat  = img_struct.feat( img_struct.gt~=1,:); 
