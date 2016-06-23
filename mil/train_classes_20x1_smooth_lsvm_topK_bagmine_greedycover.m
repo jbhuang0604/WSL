@@ -12,9 +12,9 @@
 function models = train_classes_20x1_smooth_lsvm_topK_bagmine_greedycover(...
   classid, varargin)
      
-% HOS: represents both positive and negative images as bags and refines initial detector by minimizing smooth latent svm loss.
+% represents both positive and negative images as bags and refines initial detector by minimizing smooth latent svm loss.
 
-% HOS: initialize and fix the random seed
+% initialize and fix the random seed
 randn('state', 1);
 rand('state',  1);
 
@@ -192,14 +192,14 @@ function X = get_all_features_topK_bagmine(...
                              models, dataset, opts, sample_image_ids)
 % ------------------------------------------------------------------------
 
-d = load_cached_features_hos(dataset.trainset, dataset.year, sample_image_ids{1});
+d = load_cached_features_hos(1, dataset.trainset, dataset.year, sample_image_ids{1});
 
 feat_dim = size(d.feat,2);      
 X = zeros(feat_dim, opts.topK * length(sample_image_ids), 'single');
   
 start_i = 1;
 for i = 1:length(sample_image_ids)
-  d = load_cached_features_hos(dataset.trainset, dataset.year, sample_image_ids{i});
+  d = load_cached_features_hos(1, dataset.trainset, dataset.year, sample_image_ids{i});
         
   d.feat = xform_feat_custom(d.feat, opts);   
   
