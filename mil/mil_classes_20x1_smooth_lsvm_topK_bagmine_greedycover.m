@@ -10,7 +10,7 @@
 % ---------------------------------------------------------
 
 function mil_classes_20x1_smooth_lsvm_topK_bagmine_greedycover(classid)
-                  
+       
 if ischar(classid),     classid = str2double(classid); end
 
 conf = voc_config();
