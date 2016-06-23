@@ -15,7 +15,7 @@ feat_opts.use_flipped = false;
 ns = [];
 for i = 1:length(image_ids)
   tic_toc_print('feat stats: %d/%d\n', i, length(image_ids));
-  d = load_cached_features_hos(split, year, image_ids{i});
+  d = load_cached_features_hos(1, split, year, image_ids{i});
   %d.feat = xform_feat(d.feat, pwr);
   %d.feat = d.feat ./ 19.584 * 20;
 
