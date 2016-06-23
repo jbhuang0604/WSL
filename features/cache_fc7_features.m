@@ -58,7 +58,7 @@ total_time = 0;
 count = 0;
 
 load('results_maskout_regions.mat');
-for i = opts.start:2500
+for i = opts.start:opts.end
   fprintf('%s: cache features: %d/%d\n', procid(), i, opts.end);
   
   % using all the proposals for mil testing
