@@ -25,7 +25,7 @@ bs = cat(2, bs{:});
 boxes = cell(length(image_ids), 1);
 for i = 1:length(image_ids)
     fprintf('%s: region mining: %d/%d\n', procid(), i, length(image_ids));
-    d = load_cached_features_hos(testset, year, image_ids{i});
+    d = load_cached_features_hos(0, testset, year, image_ids{i});
     d.feat = xform_feat_custom(d.feat, feat_opts);
     zs = bsxfun(@plus, d.feat*ws, bs);
     z = zs(d.gt~=1);
