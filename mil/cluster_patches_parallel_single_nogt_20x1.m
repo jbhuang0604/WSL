@@ -1,17 +1,17 @@
+function cluster_patches_parallel_single_nogt_20x1(seed_pos_image_id, ...
+                             classid, trainset, year, Q, varargin)
+              
 % AUTORIGHTS
 % ---------------------------------------------------------
 % Copyright (c) 2014, Hyun Oh Song
 % Copyright (c) 2016, Dong Li
 % 
-% This file is part of the WSL code and is available 
-% under the terms of the MIT License provided in 
+% This file is part of the Song-ICML2014 code and is available 
+% under the terms of the Simplified BSD License provided in 
 % LICENSE. Please retain this notice and LICENSE if you use 
 % this file (or any portion of it) in your project.
 % ---------------------------------------------------------
 
-function cluster_patches_parallel_single_nogt_20x1(seed_pos_image_id, ...
-                             classid, trainset, year, Q, varargin)
-              
 if ischar(seed_pos_image_id)
   seed_pos_image_id = str2double(seed_pos_image_id); 
 end         
@@ -103,7 +103,7 @@ end
 th = tic(); % measure time to process one image
 %seed_pos_image_id = 10;
 
-seed_image_struct = load_cached_features_hos(dataset.trainset, dataset.year, pos_image_ids{seed_pos_image_id});
+seed_image_struct = load_cached_features_hos(1, dataset.trainset, dataset.year, pos_image_ids{seed_pos_image_id});
 % remove ground truth boxes
 seed_image_windows = seed_image_struct.feat(seed_image_struct.gt~=1,:); %#data X #feat
 
@@ -115,7 +115,7 @@ table_pos_diff = single(zeros(num_pos_images, num_seed_windows));
 for pos_i = 1:num_pos_images
   if mod(pos_i,100)==0, fprintf('%d/%d pos\n', pos_i, num_pos_images); end
   
-  this_pos_image_windows = load_cached_features_hos(dataset.trainset, dataset.year, pos_image_ids{pos_i});
+  this_pos_image_windows = load_cached_features_hos(1, dataset.trainset, dataset.year, pos_image_ids{pos_i});
   % remove ground truth boxes                            
   this_pos_image_windows = this_pos_image_windows.feat(this_pos_image_windows.gt~=1,:);
   %this_pos_image_windows = double(X_pos{pos_i}.feat);
@@ -139,7 +139,7 @@ table_neg_diff = single(zeros(num_neg_images, num_seed_windows));
 for neg_i = 1:num_neg_images
   if mod(neg_i,100)==0, fprintf('%d/%d neg\n', neg_i, num_neg_images); end
   
-  this_neg_image_windows = load_cached_features_hos(dataset.trainset, dataset.year, neg_image_ids{neg_i});
+  this_neg_image_windows = load_cached_features_hos(1, dataset.trainset, dataset.year, neg_image_ids{neg_i});
   % remove ground truth boxes                                                    
   this_neg_image_windows = this_neg_image_windows.feat(this_neg_image_windows.gt~=1,:);
   %this_neg_image_windows = double(X_neg{neg_i}.feat);
